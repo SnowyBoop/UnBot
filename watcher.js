@@ -22,7 +22,7 @@ var params = {
     content: "",
     embeds: [
         {
-            "title": "nginx updated!",
+            "title": "New request:",
             "color": 16384229,
             "thumbnail": {
                 "url": "",
