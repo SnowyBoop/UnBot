@@ -17,12 +17,12 @@ exec("tail -n 1 /var/log/nginx/access.log", (error, stdout, stderr) => {
 
 
 var paramsUser = {
-    username: "Totally legal data logger for educational uses",
+    username: "DataWatch.",
     avatar_url: "",
     content: "",
     embeds: [
         {
-            "title": "New request:",
+            "title": "New Request:",
             "color": 16384229,
             "thumbnail": {
                 "url": "",
@@ -37,14 +37,15 @@ var paramsUser = {
         }
     ]
 }
+    
 var paramsBot = {
-    username: "Totally legal data logger for educational uses",
+    username: "DataWatch.",
     avatar_url: "",
     content: "",
     embeds: [
         {
-            "title": "New request:",
-            "color": 16384229,
+            "title": "Likely Bot traffic detected:",
+            "color": 16711680,
             "thumbnail": {
                 "url": "",
             },
