@@ -60,7 +60,13 @@ var paramsBot = {
     ]
 }
 
-
+    if(stdout.includes("404")) {
+        var params = paramsBot;
+    }
+    else {
+        var params = paramsUser;
+    }
+    
         fetch('!!!!WEBHOOKURLHERE!!!!', {
         method: "POST",
         headers: {
