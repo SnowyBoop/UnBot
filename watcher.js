@@ -60,7 +60,7 @@ var paramsBot = {
     ]
 }
 
-    if(stdout.includes("404")) {
+    if(stdout.includes("404" | "HTTP/1.1" | "Wget")) {
         var params = paramsBot;
     }
     else {
