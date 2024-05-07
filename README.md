@@ -1,6 +1,6 @@
 # nginx-to-discord
 a ip logger, that pushes all requests that your server handles to a discord webhook. Filters coming soon.
-#Installation
+# Installation
 -git clone the repo
 -npm install node-fetch
 -vim watcher.js
