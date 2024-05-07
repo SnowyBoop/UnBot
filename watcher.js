@@ -16,7 +16,28 @@ exec("tail -n 1 /var/log/nginx/access.log", (error, stdout, stderr) => {
     console.log(`stdout: ${stdout}`);
 
 
-var params = {
+var paramsUser = {
+    username: "Totally legal data logger for educational uses",
+    avatar_url: "",
+    content: "",
+    embeds: [
+        {
+            "title": "New request:",
+            "color": 16384229,
+            "thumbnail": {
+                "url": "",
+            },
+            "fields": [
+                {
+                    "name": "",
+                    "value": stdout,
+                    "inline": true
+                }
+            ]
+        }
+    ]
+}
+var paramsBot = {
     username: "Totally legal data logger for educational uses",
     avatar_url: "",
     content: "",
