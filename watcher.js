@@ -52,7 +52,7 @@ var paramsBot = {
                     "inline": true
 }]}]}
 
-    if(stdout.includes("404" | "HTTP/1.1" | "Wget")) {
+    if(stdout.includes("HTTP/1.1" | "Wget")) {
         var params = paramsBot;
     }
     else {
