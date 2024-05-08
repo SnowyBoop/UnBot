@@ -32,11 +32,7 @@ var paramsUser = {
                     "name": "",
                     "value": stdout,
                     "inline": true
-                }
-            ]
-        }
-    ]
-}
+}]}]}
     
 var paramsBot = {
     username: "DataWatch.",
