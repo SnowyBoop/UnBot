@@ -52,7 +52,7 @@ var paramsBot = {
                     "inline": true
 }]}]}
 
-    if(stdout.includes("HTTP/1.1" | "Wget")) {
+    if(stdout.includes("HTTP/1.1" | "Wget" | "scan" | "password" | "shadow")) {
         var params = paramsBot;
     }
     else {
