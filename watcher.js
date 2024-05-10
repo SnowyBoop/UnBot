@@ -60,7 +60,7 @@ var paramsBot = {
     ]
 }
 
-    if(stdout.includes("404")) {
+    if(stdout.includes("444")) {
         var params = paramsBot;
     }
     else {
