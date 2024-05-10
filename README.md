@@ -7,6 +7,7 @@ AbuseDB reporting system coming soon woop woop
 - npm install node-fetch
 - vim watcher.js
   - edit line 42, and add your webhook url
+- add website.conf to your websites config!
 - node watcher.js to run the server.
 # Tips
 I recommend adding the snippet from nginx.conf in your own nginx.conf for better readability
