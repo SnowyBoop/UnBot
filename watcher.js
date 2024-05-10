@@ -1,10 +1,10 @@
 const fs = require('fs'); const { exec } = require('child_process');
 import("node-fetch")
-const fileToWatch = '/var/log/nginx/access.log';
+const fileToWatch = '/etc/nginx/logs/access.log';
 
-fs.watch(fileToWatch, (event, filename) => { console.log("unk");
+fs.watch(fileToWatch, (event, filename) => { console.log("update incoming");
 
-exec("tail -n 1 /var/log/nginx/access.log", (error, stdout, stderr) => {
+exec("tail -n 1 /etc/nginx/logs/access.log", (error, stdout, stderr) => {
     if (error) {
         console.log(`error: ${error.message}`);
         return;
@@ -32,8 +32,12 @@ var paramsUser = {
                     "name": "",
                     "value": stdout,
                     "inline": true
-}]}]}
-    
+                }
+            ]
+        }
+    ]
+}
+
 var paramsBot = {
     username: "DataWatch.",
     avatar_url: "",
@@ -50,23 +54,27 @@ var paramsBot = {
                     "name": "",
                     "value": stdout,
                     "inline": true
-}]}]}
+                }
+            ]
+        }
+    ]
+}
 
-    if(stdout.includes("HTTP/1.1" | "Wget" | "scan" | "password" | "shadow")) {
+    if(stdout.includes("404")) {
         var params = paramsBot;
     }
     else {
         var params = paramsUser;
     }
-    
-        fetch('!!!!WEBHOOKURLHERE!!!!', {
+
+        fetch('WEBHOOK URL HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!', {
         method: "POST",
         headers: {
                 'Content-type': 'application/json'
         },
         body: JSON.stringify(params)
         }).then(res => {
-        console.log(res);
+
         })
 
 });
