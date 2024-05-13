@@ -6,8 +6,8 @@ Now featuring automated Bot reporting to abuseIPDB!
 - git clone the repo
 - npm install node-fetch
 - vim watcher.js
-  - edit line 42, and add your webhook url
-  - edit line 42, and add your AbuseIPDB key
+  - edit line 95, and add your webhook url
+  - edit line 88, and add your AbuseIPDB key
 - add website.conf to your websites config!
 - node watcher.js to run the server.
 # Tips
