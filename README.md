@@ -1,7 +1,7 @@
 # UnBot - Bot protection
 UnBot is a lightweight nodejs application, that detects bots through the way they scan your website, and logs bot ips and more to a discord webhook.
-Now featuring automated Bot detection!
-Now featuring automated Bot reporting to abuseIPDB!
+- Now featuring automated Bot detection!
+- Now featuring automated Bot reporting to abuseIPDB!
 # Installation
 - git clone the repo
 - npm install node-fetch
