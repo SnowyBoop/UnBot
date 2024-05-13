@@ -1,6 +1,6 @@
-# nginx-to-discord
-An ip logger, that pushes all requests that your nginx handles to a discord webhook. 
-Now featuring Bot detection!
+# UnBot - Bot protection
+UnBot is a lightweight nodejs application, that detects bots through the way they scan your website, and logs bot ips and more to a discord webhook.
+Now featuring automated Bot detection!
 Now featuring automated Bot reporting to abuseIPDB!
 # Installation
 - git clone the repo
