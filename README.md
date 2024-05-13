@@ -1,12 +1,13 @@
 # nginx-to-discord
 An ip logger, that pushes all requests that your nginx handles to a discord webhook. 
 Now featuring Bot detection!
-AbuseDB reporting system coming soon woop woop
+Now featuring automated Bot reporting to abuseIPDB!
 # Installation
 - git clone the repo
 - npm install node-fetch
 - vim watcher.js
   - edit line 42, and add your webhook url
+  - edit line 42, and add your AbuseIPDB key
 - add website.conf to your websites config!
 - node watcher.js to run the server.
 # Tips
