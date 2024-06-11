@@ -1,3 +1,8 @@
+// todo:   - Weight system using calculations
+//         - split reports into abuse and scanners
+//         - user settable confidence calculation and threshold
+
+
 const fs = require('fs'); const { exec } = require('child_process');
 import("node-fetch")
 const fileToWatch = '/etc/nginx/logs/access.log';
