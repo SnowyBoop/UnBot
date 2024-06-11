@@ -1,6 +1,12 @@
 // todo:   - Weight system using calculations
 //         - split reports into abuse and scanners
 //         - user settable confidence calculation and threshold
+//Abuse confidence increase with:
+//         - > 10 %
+//         - > 10 /
+//         - HTTP 1.1
+//         - go / python / curl in agent
+//
 
 
 const fs = require('fs'); const { exec } = require('child_process');
