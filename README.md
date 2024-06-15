@@ -15,3 +15,4 @@ I recommend adding the snippet from nginx.conf in your own nginx.conf for better
 # Coming soon
 - splitting detection into abuse and crawlers
 - better datalogging and reporting
+- confidence based reporting
