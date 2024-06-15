@@ -12,3 +12,6 @@ UnBot is a lightweight nodejs application, that detects bots through the way the
 - node watcher.js to run the server.
 # Tips
 I recommend adding the snippet from nginx.conf in your own nginx.conf for better readability
+# Coming soon
+- splitting detection into abuse and crawlers
+- better datalogging and reporting
