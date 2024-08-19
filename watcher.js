@@ -13,6 +13,26 @@ const fs = require('fs'); const { exec } = require('child_process');
 import("node-fetch")
 const fileToWatch = '/etc/nginx/logs/access.log';
 
+
+function checkForBackslash(str) {
+
+let count = 0;
+for (let i = 0; i < str.length; i++) {
+    if (str[i] === '\\') {
+        count++;
+    }
+
+    if (str[i] === '/') {
+        count++;
+    }
+}
+
+console.log(count);
+return count;
+
+
+}
+
 function extractData(inputString, startSubstr, endSubstr) {
 
         const startIndex = inputString.indexOf(startSubstr) + startSubstr.length; const endIndex = inputString.indexOf(endSubstr);
@@ -79,7 +99,7 @@ var paramsBot = {
     ]
 }
 
-    if(stdout.includes("444") | stdout.includes("404") |stdout.includes("400")) {
+    if(stdout.includes("444") | stdout.includes("404") | stdout.includes("400") | (checkForBackslash(stdout) > 12) ) {
 
         const d = new Date();
 
@@ -96,14 +116,15 @@ var paramsBot = {
 
         var submitUA = extractData(inputString, "UA: ", "|F|")
 
-        exec(`curl https://api.abuseipdb.com/api/v2/report --data-urlencode "ip=${submitIP}" -d categories=14 --data-urlencode 'comment= web scraper with user agent: ${submitUA}' --data-urlencode "timestamp=" -H "Key: YOUR_ABUSEDB_TOKEN_HERE!!!" -H "Accept: application/json"`, (error, stdout, stderr) => {console.log(`stdout: ${stdout}`);});
+        exec(`curl https://api.abuseipdb.com/api/v2/report --data-urlencode "ip=${submitIP}" -d categories=14 --data-urlencode 'comment= web scraper with user agent: ${submitUA}' --data-urlencode "timestamp=" -H "Key: ABUSEOIPDB_KEY" -H "Accept: application/json"`, (error, stdout, stderr) => {console.log(`stdout: ${stdout}`);});
+
         var params = paramsBot;
     }
     else {
         var params = paramsUser;
     }
 
-        fetch('YOUR_WEBHOOK_TOKEN_HERE!!!', {
+        fetch('WEBHOOK_TOKEN', {
         method: "POST",
         headers: {
                 'Content-type': 'application/json'
@@ -112,5 +133,7 @@ var paramsBot = {
         }).then(res => {
 
         })
-        });
+
 });
+});
+
